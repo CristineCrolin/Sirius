@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sirius">
+        <activity android:name=".infoBuku"></activity>
+        <activity android:name=".bukti" />
+        <activity android:name=".borrow2" />
+        <activity android:name=".Borrow" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
