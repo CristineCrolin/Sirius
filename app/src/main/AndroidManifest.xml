@@ -9,7 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sirius">
-        <activity android:name=".infoBuku"></activity>
+        <receiver
+            android:name=".MyAirplaneReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ktkReviews" />
+        <activity android:name=".Reviews" />
+        <activity android:name=".infoBuku" />
         <activity android:name=".bukti" />
         <activity android:name=".borrow2" />
         <activity android:name=".Borrow" />

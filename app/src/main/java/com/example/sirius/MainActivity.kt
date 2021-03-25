@@ -1,16 +1,28 @@
 package com.example.sirius
 
 import android.content.Intent
+import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.renderscript.Sampler
 import android.view.View
+import android.webkit.WebSettings
+import android.webkit.WebView
 import android.widget.Button
+import com.example.sirius.Fragments.FragmentA
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_reviews.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var AirplaneReceiver = MyAirplaneReceiver()
+        var filter = IntentFilter()
+        filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)
+        registerReceiver(AirplaneReceiver, filter)
+
     }
 //    Intent atau berpindah Activity
     public fun ebook(view: View) {
@@ -37,4 +49,10 @@ class MainActivity : AppCompatActivity() {
         Intentinfo.putExtra(EXTRA_BUKU, b)
         startActivity(Intentinfo)
     }
+
+    public fun hst(view: View) {
+        var Intenthistory = Intent(this,ktkReviews::class.java)
+        startActivity(Intenthistory)
+    }
+
 }

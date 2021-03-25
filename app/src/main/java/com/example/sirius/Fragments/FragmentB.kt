@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.example.sirius.R
+import kotlinx.android.synthetic.main.fragment_a.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,12 +32,21 @@ class FragmentB : Fragment() {
         }
     }
 
+    var pesan : String? = ""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        savedInstanceState: Bundle?): View? {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_b, container, false)
+        val view = inflater.inflate(R.layout.fragment_b, container, false)
+
+        pesan = arguments?.getString("Pesan")
+
+        val pesanTxt = view.findViewById<TextView>(R.id.hasilTxt)
+
+        pesanTxt.text = pesan
+
+        return view
     }
 
     companion object {

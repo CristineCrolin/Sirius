@@ -68,20 +68,27 @@
         android:id="@+id/borrowEbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_gravity="center"
         android:text="borrow e-book"
         android:onClick="ebook"/>
+
     <Button
         android:id="@+id/borrowBook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         android:layout_gravity="center"
-        android:text="borrow book"
-        android:onClick="book"/>
+        android:layout_marginBottom="10dp"
+        android:onClick="book"
+        android:text="borrow book" />
 
+    <Button
+        android:id="@+id/history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:onClick="hst"
+        android:text="History" />
 </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

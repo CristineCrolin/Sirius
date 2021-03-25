@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import androidx.fragment.app.FragmentContainer
 import com.example.sirius.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -30,12 +33,23 @@ class FragmentA : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    private lateinit var InterfaceData: InterfaceData
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?): View? {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_a, container, false)
+
+        val view = inflater.inflate(R.layout.fragment_a, container, false)
+
+        InterfaceData = activity as InterfaceData
+
+        val btn = view.findViewById<Button>(R.id.kirim)
+        val pesanTxt = view.findViewById<EditText>(R.id.pesan)
+
+        btn.setOnClickListener {
+            InterfaceData.kirimData(pesanTxt.text.toString())
+        }
+        return view
     }
 
     companion object {
