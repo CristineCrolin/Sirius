@@ -16,7 +16,6 @@ class MyAirplaneReceiver : BroadcastReceiver() {
         }
         else
             Toast.makeText(context,"Flight Mode : ON \n No Internet Connection", Toast.LENGTH_SHORT).show()
-        exitProcess()
     }
 
     private fun exitProcess() {

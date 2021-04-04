@@ -9,7 +9,9 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
+
 
     <ImageView
         android:id="@+id/image"
@@ -46,15 +48,15 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         android:text="Synopsis"/>
-    <!--<TextView
-        android:id="@+id/Information"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:text="Information"/>-->
+<!--    <TextView-->
+<!--        android:id="@+id/Information"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="15sp"-->
+<!--        android:text="Information"/>-->
     <Button
         android:id="@+id/Info"
         android:layout_width="wrap_content"
@@ -90,5 +92,7 @@
         android:layout_marginBottom="10dp"
         android:onClick="hst"
         android:text="History" />
+
+
 </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

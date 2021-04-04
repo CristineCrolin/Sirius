@@ -13,7 +13,7 @@ class ktkReviews : AppCompatActivity() {
     }
 
     public fun btnR(view: View) {
-        var intenRev = Intent(this,Reviews::class.java)
+        var intenRev = Intent(this,Reviews1::class.java)
         startActivity(intenRev)
     }
 }
