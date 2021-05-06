@@ -4,23 +4,19 @@ import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import android.graphics.Color
-import android.media.AudioAttributes
-import android.media.Ringtone
-import android.media.RingtoneManager
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.net.Uri
-import android.renderscript.Sampler
 import android.view.View
-import android.webkit.WebSettings
 import android.webkit.WebView
 import android.widget.*
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.BADGE_ICON_SMALL
 import androidx.core.app.NotificationManagerCompat
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_pengingat.*
+import java.lang.StringBuilder
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -65,5 +61,7 @@ class MainActivity : AppCompatActivity() {
         var Intenthistory = Intent(this,ktkReviews::class.java)
         startActivity(Intenthistory)
     }
+
+
 
 }
